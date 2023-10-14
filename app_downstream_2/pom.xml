@@ -9,7 +9,7 @@
         <version>2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>module2</artifactId>
+    <artifactId>app_downstream_2</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -16,9 +16,9 @@
     </properties>
 
     <modules>
-        <module>module1</module>
-        <module>module2</module>
-        <module>module3</module>
-        <module>module4</module>
+        <module>app_demo</module>
+        <module>library</module>
+        <module>app_downstream_1</module>
+        <module>app_downstream_2</module>
     </modules>
 </project>
