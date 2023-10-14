@@ -24,6 +24,12 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>ua.in.sz.mvn.modular</groupId>
+            <artifactId>library</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
