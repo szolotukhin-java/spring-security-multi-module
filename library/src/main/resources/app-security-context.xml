@@ -5,13 +5,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-6.1.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <security:http use-expressions="true" pattern="/web-service/external/**">
-        <security:intercept-url pattern="/web-service/external" access="hasRole('WS_EXT_UI')"/>
-        <security:intercept-url pattern="/web-service/external/**" access="hasRole('WS_EXT')"/>
-        <security:http-basic/>
-        <security:csrf disabled="true"/>
-    </security:http>
-
     <security:http use-expressions="true" pattern="/**">
         <security:intercept-url pattern="/**" access="hasRole('UI')" />
         <security:form-login />
