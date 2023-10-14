@@ -1,8 +1,5 @@
 ###
-* Split security XML on two parts
-
 * Nice to have: Create a tests
--> * Nice to have: Create two subprojects (one with Ext Aut, other without)     
 
 ui-user
 
