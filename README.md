@@ -1,9 +1,2 @@
-# maven-modular
+# This project contains example of security customization for downstream project 
 
-mvn deploy:deploy-file@deploy-file-custom-file
-
-# TODO maven:
-repack artifact with other version
-
-
-org.apache.maven.graph.DefaultGraphBuilder
