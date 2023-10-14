@@ -8,7 +8,7 @@
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			classpath*:/app-context.xml,
-<!--			classpath*:/external-api-security-context.xml,-->
+			classpath*:/external-api-security-context.xml,
 			classpath*:/app-security-context.xml
 		</param-value>
 	</context-param>
