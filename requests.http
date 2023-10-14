@@ -1,6 +1,6 @@
 # Application User
 ### Login Application User
-POST http://localhost:8080/module1_war/login
+POST http://localhost:8080/{{webapp_context}}/login
 Content-Type: application/x-www-form-urlencoded
 
 username = ui-user &
@@ -8,29 +8,29 @@ password = ui-user
 
 ### Logout Application User
 # @no-redirect
-POST http://localhost:8080/module1_war/logout
+POST http://localhost:8080/{{webapp_context}}/logout
 
 ### UI   (Application user can open application UI )
 # @no-redirect
-GET http://localhost:8080/module1_war/
+GET http://localhost:8080/{{webapp_context}}/
 
 ### Internal Web service  (Application user can execute the Dirivation endpoint from the internal web services)
 # @no-redirect
-GET http://localhost:8080/module1_war/web-service/internal/dirivation
+GET http://localhost:8080/{{webapp_context}}/web-service/internal/dirivation
 
 # Extrenal service user
 
 ### External Web service UI   (Extrenal user can get a list of the external web services via UI)
 # @no-redirect
-GET http://localhost:8080/module1_war/web-service/external
-#Authorization: Basic ws-ext-user ws-ext-user
+GET http://localhost:8080/{{webapp_context}}/web-service/external
+Authorization: Basic ws-ext-user ws-ext-user
 
 ### External Web service   (Extrenal user can execute the Entity endpoint from the external web services)
 # @no-redirect
-GET http://localhost:8080/module1_war/web-service/external/entity
-#Authorization: Basic ws-ext-user ws-ext-user
+GET http://localhost:8080/{{webapp_context}}/web-service/external/entity
+Authorization: Basic ws-ext-user ws-ext-user
 
 ### External Web service   (Extrenal user can execute the Schedule endpoint from the external web services )
 # @no-redirect
-GET http://localhost:8080/module1_war/web-service/external/schedule
-#Authorization: Basic ws-ext-user ws-ext-user
+GET http://localhost:8080/{{webapp_context}}/web-service/external/schedule
+Authorization: Basic ws-ext-user ws-ext-user
