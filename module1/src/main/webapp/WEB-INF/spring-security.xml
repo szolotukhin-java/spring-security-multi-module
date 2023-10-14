@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-6.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <security:http use-expressions="true" pattern="/web-service/external/**">
+        <security:intercept-url pattern="/web-service/external" access="hasRole('WS_EXT_UI')"/>
+        <security:intercept-url pattern="/web-service/external/**" access="hasRole('WS_EXT')"/>
+        <security:http-basic/>
+        <security:csrf disabled="true"/>
+    </security:http>
+
+    <security:http use-expressions="true" pattern="/**">
+        <security:intercept-url pattern="/**" access="hasRole('UI')" />
+        <security:form-login />
+        <security:logout />
+        <security:csrf disabled="true"/>
+    </security:http>
+
+    <security:authentication-manager alias="authenticationManager">
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="ui-user" password="{noop}ui-user" authorities="ROLE_UI"/>
+
+                <security:user name="ws-ext-user" password="{noop}ws-ext-user" authorities="ROLE_WS_EXT,ROLE_WS_EXT_UI"/>
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean name="mvcHandlerMappingIntrospector" class="org.springframework.web.servlet.handler.HandlerMappingIntrospector">
+    </bean>
+</beans>
