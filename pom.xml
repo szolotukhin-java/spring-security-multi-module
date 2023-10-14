@@ -25,8 +25,7 @@
     <modules>
         <module>app_demo</module>
         <module>library</module>
-        <module>app_downstream_1</module>
-        <module>app_downstream_2</module>
+        <module>app_downstream</module>
     </modules>
 
     <dependencyManagement>
